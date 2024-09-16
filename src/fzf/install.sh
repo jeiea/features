@@ -1,7 +1,9 @@
 
 set -e
 
+echo library scripts
 . ./library_scripts.sh
+echo library scripts done
 
 # nanolayer is a cli utility which keeps container layers as small as possible
 # source code: https://github.com/devcontainers-contrib/nanolayer
@@ -10,6 +12,7 @@ set -e
 # of the script
 ensure_nanolayer nanolayer_location "v0.5.4"
 
+echo nanolayer done
 
 $nanolayer_location \
     install \
